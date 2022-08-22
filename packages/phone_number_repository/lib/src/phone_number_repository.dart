@@ -21,7 +21,7 @@ class PhoneNumberRepository {
 
   /// Deletes the number with the given id.
   ///
-  /// If no number with the given id exists, a [PhoneNumberNotFoundException] error is
-  /// thrown.
+  /// If no number with the given id exists, a
+  /// [PhoneNumberNotFoundException] error is thrown.
   Future<void> delete(String id) => _api.delete(id);
 }

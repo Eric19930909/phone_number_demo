@@ -39,9 +39,8 @@ class ShowView extends StatelessWidget {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: const Text("Show phone number"),
+        title: const Text('Show phone number'),
         centerTitle: true,
-        automaticallyImplyLeading: true,
       ),
       body: BlocBuilder<ShowBloc, ShowState>(
         builder: (context, state) {
@@ -50,7 +49,7 @@ class ShowView extends StatelessWidget {
           if (state.numberList.isEmpty) {
             return Center(
               child: Text(
-                "没有数据",
+                '没有数据',
                 style: Theme.of(context).textTheme.caption,
               ),
             );
@@ -62,7 +61,7 @@ class ShowView extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(10),
                   child: Text(
-                    "${number.prefix} ${number.number}",
+                    '${number.prefix} ${number.number}',
                   ),
                 ),
             ],

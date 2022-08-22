@@ -17,8 +17,8 @@ abstract class PhoneNumberApi {
 
   /// Deletes the PhoneNumber with the given id.
   ///
-  /// If no PhoneNumber with the given id exists, a [PhoneNumberNotFoundException]
-  /// error is thrown.
+  /// If no PhoneNumber with the given id exists, a
+  /// [PhoneNumberNotFoundException] error is thrown.
   Future<void> delete(String id);
 }
 
