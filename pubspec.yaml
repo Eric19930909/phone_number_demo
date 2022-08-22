@@ -1,0 +1,37 @@
+name: app
+description: A new Flutter project.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  dio: ^4.0.6
+  json_serializable: ^6.3.1
+  json_annotation: ^4.6.0
+  common_utils: ^2.1.0
+  bloc: ^8.1.0
+  flutter_bloc: ^8.1.1
+  equatable: ^2.0.5
+  local_storage_number_api:
+    path: packages/local_storage_number_api
+  phone_number_api:
+    path: packages/phone_number_api
+  phone_number_repository:
+    path: packages/phone_number_repository
+
+dev_dependencies:
+  bloc_test: ^9.0.1
+  build_runner: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - lib/assets/images/
