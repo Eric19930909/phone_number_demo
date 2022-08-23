@@ -1,3 +1,4 @@
+import 'package:app/l10n/l10n.dart';
 import 'package:app/show/bloc/show_bloc.dart';
 import 'package:common_utils/common_utils.dart';
 import 'package:flutter/material.dart';
@@ -35,11 +36,12 @@ class ShowView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: const Text('Show phone number'),
+        title: Text(l10n.showPageTitle),
         centerTitle: true,
       ),
       body: BlocBuilder<ShowBloc, ShowState>(
@@ -49,7 +51,7 @@ class ShowView extends StatelessWidget {
           if (state.numberList.isEmpty) {
             return Center(
               child: Text(
-                '没有数据',
+                l10n.emptyDataShowText,
                 style: Theme.of(context).textTheme.caption,
               ),
             );

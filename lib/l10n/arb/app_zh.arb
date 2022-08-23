@@ -1,0 +1,13 @@
+{
+  "@@locale": "zh",
+  "homePageTitle": "验证手机号码",
+  "showPageTitle": "展示电话号码",
+  "selectCountryCode": "选择国家区号",
+  "saveSuccess": "保存成功",
+  "sameNumberAlreadyExists": "已存在相同号码",
+  "enterThePhoneNumber": "请输入电话号码",
+  "numberTipsText": "请输入电话号码",
+  "showPageTooltip": "展示所有数据",
+  "emptyDataShowText": "没有数据",
+  "confirm": "提交"
+}

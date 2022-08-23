@@ -1,0 +1,40 @@
+{
+  "@@locale": "en",
+  "homePageTitle": "Validate phone number",
+  "@homePageTitle": {
+    "description": "Title text shown in the AppBar of the Home Page"
+  },
+  "showPageTitle": "Show phone number",
+  "@showPageTitle": {
+    "description": "Title text shown in the AppBar of the Show Page"
+  },
+  "selectCountryCode": "Select the country code",
+  "@selectCountryCode": {
+    "description": "Title for country code dialog"
+  },
+  "saveSuccess": "Save success",
+  "@saveSuccess": {
+    "description": "Tips for save phone number success"
+  },
+  "sameNumberAlreadyExists": "The same number already exists",
+  "@sameNumberAlreadyExists": {
+    "description": "Tips for save error"
+  },
+  "enterThePhoneNumber": "Please enter the phone number",
+  "@enterThePhoneNumber": {
+    "description": "Tips for empty number"
+  },
+  "numberTipsText": "Please enter a phone number",
+  "@numberTipsText": {
+    "description": "Tips for enter number"
+  },
+  "showPageTooltip": "Show all phone number",
+  "@showPageTooltip": {
+    "description": "Tooltip for jump to Show Page"
+  },
+  "emptyDataShowText": "There is no data",
+  "@emptyDataShowText": {
+    "description": "Empty data show text"
+  },
+  "confirm": "Confirm"
+}

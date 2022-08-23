@@ -1,4 +1,5 @@
 import 'package:app/home/view/home_page.dart';
+import 'package:app/l10n/l10n.dart';
 import 'package:app/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -26,6 +27,8 @@ class AppView extends StatelessWidget {
     return MaterialApp(
       theme: FlutterNumberTheme.light,
       darkTheme: FlutterNumberTheme.dark,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       home: const HomePage(),
     );
   }

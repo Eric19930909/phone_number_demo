@@ -1,4 +1,5 @@
 import 'package:app/home/bloc/home_bloc.dart';
+import 'package:app/l10n/l10n.dart';
 import 'package:app/show/view/show_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -26,9 +27,10 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Validate phone number'),
+        title: Text(l10n.homePageTitle),
         centerTitle: true,
       ),
       body: MultiBlocListener(
@@ -61,7 +63,7 @@ class HomeView extends StatelessWidget {
                 showDialog<String>(
                   context: context,
                   builder: (_) => SimpleDialog(
-                    title: const Text('选择国家区号'),
+                    title: Text(l10n.selectCountryCode),
                     children: widgetList,
                   ),
                 ).then(
@@ -88,16 +90,25 @@ class HomeView extends StatelessWidget {
             listener: (context, state) {
               if (state.status == HomeStatus.success) {
                 // 保存成功
-                ScaffoldMessenger.of(context)
-                    .showSnackBar(const SnackBar(content: Text('保存成功')));
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(l10n.saveSuccess),
+                  ),
+                );
               } else if (state.status == HomeStatus.failure) {
                 // 保存失败
-                ScaffoldMessenger.of(context)
-                    .showSnackBar(const SnackBar(content: Text('已存在相同号码')));
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(l10n.sameNumberAlreadyExists),
+                  ),
+                );
               } else if (state.status == HomeStatus.emptyFailure) {
                 // 号码为空
-                ScaffoldMessenger.of(context)
-                    .showSnackBar(const SnackBar(content: Text('请输入电话号码')));
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(l10n.enterThePhoneNumber),
+                  ),
+                );
               }
             },
           )
@@ -120,7 +131,7 @@ class HomeView extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Text('Please enter a phone number:'),
+                Text(l10n.numberTipsText),
                 const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -160,7 +171,7 @@ class HomeView extends StatelessWidget {
                           controller.text,
                         ),
                       ),
-                  child: const Text('Confirm'),
+                  child: Text(l10n.confirm),
                 )
               ],
             );
@@ -169,7 +180,7 @@ class HomeView extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.of(context).push(ShowPage.route()),
-        tooltip: 'Show',
+        tooltip: l10n.showPageTooltip,
         child: const Icon(Icons.book),
       ),
     );
